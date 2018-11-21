@@ -26,19 +26,15 @@
 ``` 
 { 
      "code" : 0, 
-     "message" : { 
-     }, 
+     "message" : null, 
      "data" : { 
           "id" : 1234, 
-          "avatar" : { 
-          }, 
-          "name" : { 
-          }, 
+          "avatar" : null, 
+          "name" : null, 
           "mail" : "name@example.com", 
-          "phone" : { 
-          }, 
+          "phone" : null, 
           "token" : "123123FSDAGSG234268734956237894658WEYRGUIJSDHFGJSKLDFHGLSDFKYOUSI829734569238475698SDYFGIOSUDFYGOIUY23578692348576234985YSUIDYFU", 
-          "locked" : "false" 
+          "locked" : false 
      } 
  }
 
@@ -74,18 +70,16 @@ x-user-token:123123FSDAGSG234268734956237894658WEYRGUIJSDHFGJSKLDFHGLSDFKYOUSI82
 ``` 
 { 
      "code" : 0, 
-     "message" : { 
-     }, 
+     "message" : null, 
      "data" : { 
           "id" : 112902, 
           "value" : "perf_ssid=aaa; ubt_ssid=bbb; snsInfo[101204453]=ccc; SID=ddd;", 
           "nickname" : "name", 
           "headImgUrl" : "http://thirdqq.qlogo.cn/qqapp/101204453/ZSDGSDFGSDF/40", 
-          "application" : "1", 
-          "valid" : "true", 
-          "gmtCreate" : "1542774249762", 
-          "gmtModified" : { 
-          } 
+          "application" : 1, 
+          "valid" : true, 
+          "gmtCreate" : 1542774249762, 
+          "gmtModified" : null 
      } 
  }
 
@@ -125,24 +119,19 @@ x-user-token:123123FSDAGSG234268734956237894658WEYRGUIJSDHFGJSKLDFHGLSDFKYOUSI82
 ``` 
 { 
      "code" : 0, 
-     "message" : { 
-     }, 
+     "message" : null, 
      "data" : { 
           "id" : 123456, 
           "urlKey" : "2a1561111111113c", 
           "url" : "https://h5.ele.me/hongbao/#lucky_number=0&sn=2a1561111111113c&theme_id=5", 
           "phone" : "", 
-          "application" : "1", 
-          "type" : { 
-          }, 
-          "status" : "0", 
-          "price" : { 
-          }, 
-          "message" : { 
-          }, 
-          "gmtCreate" : "1542775139775", 
-          "gmtModified" : { 
-          } 
+          "application" : 1, 
+          "type" : null, 
+          "status" : 0, 
+          "price" : null, 
+          "message" : null, 
+          "gmtCreate" : 1542775139775, 
+          "gmtModified" : null 
      } 
  }
 
@@ -185,11 +174,10 @@ x-user-token:123123FSDAGSG234268734956237894658WEYRGUIJSDHFGJSKLDFHGLSDFKYOUSI82
           "application" : 1, 
           "type" : 1, 
           "status" : 2, 
-          "price" : { 
-          }, 
+          "price" : null, 
           "message" : "已领取到最佳前一个红包。下一个是最大红包，请手动打开红包链接领取", 
-          "gmtCreate" : "1542775642000", 
-          "gmtModified" : "1542775650000" 
+          "gmtCreate" : 1542775642000, 
+          "gmtModified" : 1542775650000 
      } 
  }
 
