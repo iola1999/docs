@@ -144,6 +144,7 @@ x-user-token:123123FSDAGSG234268734956237894658WEYRGUIJSDHFGJSKLDFHGLSDFKYOUSI82
 
 另外，饿了么红包链接中的 sn 是 hex(订单号)，可以在不便复制红包链接的情况下获取链接（如微信公众号），转换时注意精度。
 
+
 ### 提交领取任务
 
 **请求URL：** 
