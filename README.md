@@ -1,4 +1,7 @@
-# mtdhb/api 的部分文档
+# [mtdhb/api](https://github.com/mtdhb/api) 的部分文档
+
+
+[TOC]
 
 
 ## 基础
@@ -37,11 +40,10 @@
           "locked" : false 
      } 
  }
-
 ```
 
 
-## 贡献饿了么 cookie
+## 贡献 cookie
 目前只支持一次提交一条。
 
 **请求URL：** 
@@ -81,12 +83,13 @@ x-user-token:123123FSDAGSG234268734956237894658WEYRGUIJSDHFGJSKLDFHGLSDFKYOUSI82
           "gmtModified" : null 
      } 
  }
-
 ```
 
 ## 领取饿了么
 现在只支持领到大包前面一个，需要手动点进去领取最大包。提交的手机号码会被忽略。
-领取的流程时：先提交，得到领取的任务 id，等待几秒后查询领取结果，根据返回的 status、messag 判断领取状况。
+
+领取的流程时：先提交，得到领取的任务 id；等待几秒后查询领取结果，根据返回的 status、messag 判断领取状况。
+
 另外，红包链接中的 sn 是 hex(订单号)，转换时注意精度。这一点可以用于不便复制红包链接的情况（如微信公众号）。
 
 ### 提交领取任务
@@ -107,8 +110,8 @@ x-user-token:123123FSDAGSG234268734956237894658WEYRGUIJSDHFGJSKLDFHGLSDFKYOUSI82
 
 |参数名|必选|类型|说明|
 |:----    |:---|:----- |-----   |
-|phone |  是  |    string   | 可以是空（会被忽略），但不能少这个参数。 |
-|url |  是  |    string   | 红包链接，至少要包含 sn |
+|phone |  是  |    string   | 如只需领到大包前一个，此处留空（饿了么领取时会忽略），但不能少这个参数。 |
+|url |  是  |    string   | 红包链接，可以是短网址 |
 |force |  是  |    int   | 是否强制领取（不检查数据库内是否领取过），建议为 1。 |
 
 
@@ -132,14 +135,14 @@ x-user-token:123123FSDAGSG234268734956237894658WEYRGUIJSDHFGJSKLDFHGLSDFKYOUSI82
           "gmtModified" : null 
      } 
  }
-
 ```
 
 
 
 ###  查询领取结果
 
-提交后等待三秒左右开始查询，领取未完成时 status 为 0。等待一秒左右再次查询，直到 status 为2，且 message 为 "已领取到最佳前一个红包。下一个是最大红包，请手动打开红包链接领取"，即可视作领取完成。
+提交后等待三秒左右开始查询，领取未完成时 status 为 0。等待一秒左右再次查询，直到 status 为2，且 message 为 ` 已领取到最佳前一个红包。下一个是最大红包，请手动打开红包链接领取` ，即可视作领取完成。
+
 这部分有一些异常需要处理，但也不容易碰到。文档待完善。
 
 **请求URL（末尾为提交时返回的id）：** 
@@ -162,8 +165,7 @@ x-user-token:123123FSDAGSG234268734956237894658WEYRGUIJSDHFGJSKLDFHGLSDFKYOUSI82
 ``` 
 { 
      "code" : 0, 
-     "message" : { 
-     }, 
+     "message" : null, 
      "data" : { 
           "id" : 123456, 
           "urlKey" : "2a1561111111113c", 
@@ -178,6 +180,5 @@ x-user-token:123123FSDAGSG234268734956237894658WEYRGUIJSDHFGJSKLDFHGLSDFKYOUSI82
           "gmtModified" : 1542775650000 
      } 
  }
-
 ```
 
