@@ -66,7 +66,7 @@ x-user-token:123123FSDAGSG234268734956237894658WEYRGUIJSDHFGJSKLDFHGLSDFKYOUSI82
 |参数名|必选|类型|说明|
 |:----    |:---|:----- |-----   |
 |value |  是  |    string   | 完整 cookie |
-|application |  是  |    int   |   1: 饿了么   |
+|application |  是  |    int   |   0: 美团，1: 饿了么，2: 饿了么星选   |
 
 
 **返回示例**
